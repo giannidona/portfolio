@@ -1,4 +1,6 @@
 import Posts from "./components/Posts";
+import { Projects } from "./components/Projects";
+
 export default function Home() {
   return (
     <>
@@ -18,6 +20,7 @@ export default function Home() {
         </p>
       </section>
       <Posts />
+      <Projects />
     </>
   );
 }

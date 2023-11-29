@@ -1,9 +1,10 @@
 ---
-title: Chapter I -
-summary: chapter summary
-date: 14/02/2023
+title: Chapter I - Why did I start a web agency?
+summary: The beginning of something I've always wanted to do.
+date: 11/22/2023
 ---
 
 # PROBANDO
 
-probando los links y demas
+awd
+awd

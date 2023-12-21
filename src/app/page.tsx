@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <section id="main" className="pb-12">
-        <div className="text-center pt-48">
+        <div className="text-center pt-24">
           <h1 className="font-bold text-4xl">
             WELCOME TO MY <span className="block pt-1">LITTLE CORNER!</span>
           </h1>
@@ -19,7 +19,6 @@ export default function Home() {
           things I am learning and doing, as well as future projects.
         </p>
       </section>
-      <Posts />
       <Projects />
     </>
   );

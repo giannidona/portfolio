@@ -13,9 +13,24 @@ export const Projects = () => {
             <p className="font-bold mb-1">{project.title}</p>
             <p className="text-stone-500 italic mb-1">{project.description}</p>
             <p className="mb-1">{project.technoliges}</p>
-            <a className="mb-1 hover:text-neutral-300" href={project.github}>
-              code
-            </a>
+            {project.github && (
+              <a
+                className="mb-1 hover:text-neutral-300 pr-5"
+                href={project.github}
+                target="_blank"
+              >
+                code
+              </a>
+            )}
+            {project.link && (
+              <a
+                className="mb-1 hover:text-neutral-300"
+                href={project.link}
+                target="_blank"
+              >
+                demo
+              </a>
+            )}
           </div>
         ))}
       </div>

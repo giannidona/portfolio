@@ -1,6 +1,6 @@
 import projects from "../../../data/projects.json";
 
-export const Projects = () => {
+export default function Projects() {
   return (
     <section>
       <h3 className="text-center text-2xl font-bold mb-10">PROJECTS</h3>
@@ -36,4 +36,4 @@ export const Projects = () => {
       </div>
     </section>
   );
-};
+}

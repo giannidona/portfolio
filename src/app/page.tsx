@@ -1,5 +1,6 @@
 import Posts from "./components/Posts";
-import { Projects } from "./components/Projects";
+import Projects from "./components/Projects";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -18,7 +19,16 @@ export default function Home() {
           will upload chapters of my life as a developer, sharing both the
           things I am learning and doing, as well as future projects.
         </p>
+        <div className="flex justify-evenly pt-5">
+          <a href="https://github.com/giannidona" target="_blank">
+            <FaGithub className="text-4xl" />
+          </a>
+          <a href="https://www.linkedin.com/in/gianidonato/" target="_blank">
+            <FaLinkedin className="text-4xl" />
+          </a>
+        </div>
       </section>
+      <Posts />
       <Projects />
     </>
   );

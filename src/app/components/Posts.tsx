@@ -10,6 +10,7 @@ export default function Posts() {
       {posts.map((post) => (
         <ListItem key={post.id} post={post} />
       ))}
+      <p className="text-center italic">cooming soon...</p>
     </section>
   );
 }

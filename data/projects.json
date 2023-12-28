@@ -16,7 +16,7 @@
   {
     "id": 3,
     "title": "Real State Web Site",
-    "description": "web design for fake client",
+    "description": "web design for fake client.",
     "technoliges": "html - css - booststrap",
     "github": "https://github.com/giannidona/PF-Donato",
     "link": "https://lucky-croissant-d329ed.netlify.app/"
@@ -24,7 +24,7 @@
   {
     "id": 4,
     "title": "Start Point Coaching",
-    "description": "lading page for a real client.",
+    "description": "ladingpage for a real client.",
     "technoliges": "node - express - mongodb - socket.io",
     "link": "https://sp-coaching.net.ar/"
   }

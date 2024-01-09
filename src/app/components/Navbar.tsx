@@ -1,12 +1,16 @@
 import Link from "next/link";
+import ThemeSwitch from "./ThemeSwitch";
 
 export default function Navbar() {
   return (
-    <nav className="text-center py-5 border-b-4 border-white">
-      <div>
-        <Link className="font-blold" href={"/"}>
+    <nav className="flex justify-between px-10 text-center py-5 border-b-4 dark:border-sslate-950">
+      <div className="my-auto">
+        <Link className="font-bold" href={"/"}>
           GIANLUCA DONATO
         </Link>
+      </div>
+      <div>
+        <ThemeSwitch />
       </div>
     </nav>
   );

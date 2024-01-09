@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import Navbar from "./components/Navbar";
 import "./globals.css";
+import { Providers } from "./providers";
 
 const nunito = Nunito({
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Gianluca Donato - Blog",
-  description: "small chapters of my life",
+  title: "Gianluca Donato",
+  description: "Portfolio de Gianluca Donato",
 };
 
 export default function RootLayout({
@@ -18,10 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={nunito.className}>
-        <Navbar />
-        {children}
+        <Providers>
+          <Navbar />
+          {children}
+        </Providers>
       </body>
     </html>
   );

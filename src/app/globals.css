@@ -2,13 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+html,
+body {
   scroll-behavior: smooth;
+  /* color: #e6e6dd;
+  background: #1d1d1d; */
 }
 
 body {
   max-width: 768px;
   margin: auto;
-  background-color: #1d1d1d;
-  color: #e6e6dd;
 }

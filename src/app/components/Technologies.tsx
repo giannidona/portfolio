@@ -5,9 +5,9 @@ import { SiTailwindcss } from "react-icons/si";
 
 export default function Technologies() {
   return (
-    <nav className="text-center py-5 ">
+    <section className="text-center py-5 ">
       <h3 className="text-center text-2xl font-bold mb-10">TECHNOLOGIES</h3>
-      <section className="flex justify-center gap-4">
+      <div className="flex justify-center gap-4">
         <div>
           <FaHtml5 className="text-5xl mx-auto" />
           <p>HTML</p>
@@ -41,7 +41,7 @@ export default function Technologies() {
           <SiTailwindcss className="text-5xl mx-auto" />
           <p>TAILWIND</p>
         </div>
-      </section>
-    </nav>
+      </div>
+    </section>
   );
 }

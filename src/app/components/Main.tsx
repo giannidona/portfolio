@@ -5,7 +5,7 @@ export default function Main() {
         <h1 className="text-5xl font-bold mb-5">Gianluca Donato</h1>
         <p className="text-xl">Desarrollador web trainee.</p>
         <p className="text-xl">
-          Para saber mas mi de tengo un{" "}
+          Para saber más de mí tengo un{" "}
           <a
             className="font-bold underline"
             href="https://giannidona-newsletter.netlify.app/"

@@ -2,25 +2,17 @@
   {
     "id": 1,
     "title": "Content Manager System",
-    "description": "content manager system for share your content.",
-    "technoliges": ["node", "express", "mongodb"],
+    "description": "Compartí el contenido que haces y date a conocer.",
+    "technoliges": ["node.js", "express", "mongodb", "handlebars"],
     "code": "https://github.com/giannidona/cms",
-    "demo": "https://github.com/giannidona/cms"
+    "demo": ""
   },
   {
     "id": 2,
-    "title": "Content Manager System",
-    "description": "content manager system for share your content.",
-    "technoliges": ["node", "express", "mongodb"],
-    "code": "https://github.com/giannidona/cms",
-    "demo": "https://github.com/giannidona/cms"
-  },
-  {
-    "id": 3,
-    "title": "Content Manager System",
-    "description": "content manager system for share your content.",
-    "technoliges": ["node", "express", "mongodb"],
-    "code": "https://github.com/giannidona/cms",
-    "demo": "https://github.com/giannidona/cms"
+    "title": "Chat Online",
+    "description": "Habla con tus amigos y conoce gente.",
+    "technoliges": ["node.js", "express", "mongodb", "handlebars"],
+    "code": "https://github.com/giannidona/online-chat",
+    "demo": ""
   }
 ]

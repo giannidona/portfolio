@@ -5,12 +5,12 @@ import { FiGithub } from "react-icons/fi";
 
 export default function Projects() {
   return (
-    <section>
-      <h3 className="text-center text-2xl font-bold mb-10">PROJECTS</h3>
+    <section className="sm:w-full md:w-3/5 xl:w-2/5 mx-auto px-5">
+      <h3 className="text-center text-2xl font-bold mb-10">PROYECTOS</h3>
       <div>
         {projects.map((project) => (
           <div
-            className="border-2 rounded-md border-white w-3/5 m-auto mb-5 p-2"
+            className="border-2 rounded-md border-white m-auto mb-5 p-2"
             key={project.id}
           >
             <div className="flex justify-between">

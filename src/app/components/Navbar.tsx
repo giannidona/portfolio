@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { FaXTwitter } from "react-icons/fa6";
 import { PiLinkedinLogoBold } from "react-icons/pi";
 import { FiGithub } from "react-icons/fi";
@@ -7,7 +5,7 @@ import { IoLogoTwitch } from "react-icons/io";
 
 export default function Navbar() {
   return (
-    <nav className="w-3/5 mx-auto px-10 py-5 border-b-2">
+    <nav className="sm:w-full md:w-3/5 xl:w-2/5 mx-auto px-10 sm:py-5 border-b-2">
       <div className="flex justify-center">
         <a
           className="hover:text-gray-500"
@@ -24,7 +22,7 @@ export default function Navbar() {
           <PiLinkedinLogoBold className="mx-3 text-2xl" />
         </a>
         <a
-          className="hover:text-blue-500"
+          className="hover:text-stone-400"
           href="https://twitter.com/giannidona_dev"
           target="_blank"
         >

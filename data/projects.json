@@ -3,29 +3,24 @@
     "id": 1,
     "title": "Content Manager System",
     "description": "content manager system for share your content.",
-    "technoliges": "node - express - mongodb",
-    "github": "https://github.com/giannidona/cms"
+    "technoliges": ["node", "express", "mongodb"],
+    "code": "https://github.com/giannidona/cms",
+    "demo": "https://github.com/giannidona/cms"
   },
   {
     "id": 2,
-    "title": "Online Chat",
-    "description": "chat whit your friends.",
-    "technoliges": "node - express - mongodb - socket.io",
-    "github": "https://github.com/giannidona/online-chat"
+    "title": "Content Manager System",
+    "description": "content manager system for share your content.",
+    "technoliges": ["node", "express", "mongodb"],
+    "code": "https://github.com/giannidona/cms",
+    "demo": "https://github.com/giannidona/cms"
   },
   {
     "id": 3,
-    "title": "Real State Web Site",
-    "description": "web design for fake client.",
-    "technoliges": "html - css - booststrap",
-    "github": "https://github.com/giannidona/PF-Donato",
-    "link": "https://lucky-croissant-d329ed.netlify.app/"
-  },
-  {
-    "id": 4,
-    "title": "Start Point Coaching",
-    "description": "ladingpage for a real client.",
-    "technoliges": "node - express - mongodb - socket.io",
-    "link": "https://sp-coaching.net.ar/"
+    "title": "Content Manager System",
+    "description": "content manager system for share your content.",
+    "technoliges": ["node", "express", "mongodb"],
+    "code": "https://github.com/giannidona/cms",
+    "demo": "https://github.com/giannidona/cms"
   }
 ]

@@ -10,7 +10,7 @@ export default function Projects() {
       <div>
         {projects.map((project) => (
           <div
-            className="border-2 rounded-md border-white m-auto mb-5 p-2"
+            className="border-2 border-black dark:border-white rounded-md m-auto mb-5 p-2"
             key={project.id}
           >
             <div className="flex justify-between">

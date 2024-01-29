@@ -1,7 +1,7 @@
 export default function Main() {
   return (
     <>
-      <section className="text-center my-40">
+      <section className="w-11/12 mx-auto text-center my-40">
         <h1 className="text-5xl font-bold mb-5">Gianluca Donato</h1>
         <p className="text-xl">Desarrollador web trainee.</p>
         <p className="text-xl">

@@ -1,72 +1,37 @@
-import Image from "next/image";
-
 export default function Skills() {
   return (
-    <section>
+    <section className="sm:w-full md:w-3/5 xl:w-2/5 mx-auto px-5 ">
       <h3 className="text-center text-2xl font-bold my-20 mb-10">
         TECNOLOGIAS
       </h3>
-      <div className="flex justify-center">
-        <Image
-          className="m-5"
-          alt="html"
-          src="/html5.svg"
-          width={50}
-          height={50}
-        />
-        <Image
-          className="m-5"
-          alt="css"
-          src="/css.svg"
-          width={50}
-          height={50}
-        />
-        <Image
-          className="m-5"
-          alt="javascript"
-          src="/javascript.svg"
-          width={50}
-          height={50}
-        />
-      </div>
-      <div className="flex justify-center">
-        <Image
-          className="m-5"
-          alt="react"
-          src="/react.svg"
-          width={50}
-          height={50}
-        />
-        <Image
-          className="m-5"
-          alt="nextjs"
-          src="/nextjs.svg"
-          width={50}
-          height={50}
-        />
-        <Image
-          className="m-5"
-          alt="astro"
-          src="/astro.svg"
-          width={50}
-          height={50}
-        />
-      </div>
-      <div className="flex justify-center">
-        <Image
-          className="m-5"
-          alt="nodejs"
-          src="/nodejs.svg"
-          width={50}
-          height={50}
-        />
-        <Image
-          className="m-5"
-          alt="express"
-          src="/express.svg"
-          width={50}
-          height={50}
-        />
+      <div className="flex flex-wrap justify-center p-4">
+        <p className="rounded-full border-2 border-black dark:border-white px-2 text-base sm:text-lg md:text-xl mx-1 mb-3">
+          html
+        </p>
+        <p className="rounded-full border-2 border-black dark:border-white px-2 text-base sm:text-lg md:text-xl mx-1 mb-3">
+          css
+        </p>
+        <p className="rounded-full border-2 border-black dark:border-white px-2 text-base sm:text-lg md:text-xl mx-1 mb-3">
+          javascript
+        </p>
+        <p className="rounded-full border-2 border-black dark:border-white px-2 text-base sm:text-lg md:text-xl mx-1 mb-3">
+          react
+        </p>
+        <p className="rounded-full border-2 border-black dark:border-white px-2 text-base sm:text-lg md:text-xl mx-1 mb-3">
+          nextjs
+        </p>
+        <p className="rounded-full border-2 border-black dark:border-white px-2 text-base sm:text-lg md:text-xl mx-1 mb-3">
+          astro
+        </p>
+        <p className="rounded-full border-2 border-black dark:border-white px-2 text-base sm:text-lg md:text-xl mx-1 mb-3">
+          nodejs
+        </p>
+        <p className="rounded-full border-2 border-black dark:border-white px-2 text-base sm:text-lg md:text-xl mx-1 mb-3">
+          express
+        </p>
+        <p className="rounded-full border-2 border-black dark:border-white px-2 text-base sm:text-lg md:text-xl mx-1 mb-3">
+          mongodgb
+        </p>
       </div>
     </section>
   );

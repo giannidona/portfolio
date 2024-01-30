@@ -1,18 +1,20 @@
 [
   {
     "id": 1,
-    "title": "Content Manager System",
-    "description": "Compartí el contenido que haces y date a conocer.",
-    "technoliges": ["node.js", "express", "mongodb", "handlebars"],
-    "code": "https://github.com/giannidona/cms",
-    "demo": ""
+    "title": "Real State Website",
+    "description": "Página para una empresa de bienes raíces.",
+    "technoliges": ["HTML", "CSS"],
+    "code": "https://github.com/giannidona/PF-Donato",
+    "demo": "https://lucky-croissant-d329ed.netlify.app/",
+    "img": "/bienesraices.png"
   },
   {
     "id": 2,
-    "title": "Chat Online",
-    "description": "Habla con tus amigos y conoce gente.",
-    "technoliges": ["node.js", "express", "mongodb", "handlebars"],
-    "code": "https://github.com/giannidona/online-chat",
-    "demo": ""
+    "title": "Landingpage Start Point Coaching",
+    "description": "Página para cliente real.",
+    "technoliges": ["HTML", "CSS"],
+    "code": "",
+    "demo": "https://sp-coaching.net.ar/",
+    "img": "/bienesraices.png"
   }
 ]

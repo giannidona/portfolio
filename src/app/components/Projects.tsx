@@ -1,5 +1,5 @@
 import projects from "../../../data/projects.json";
-
+import Image from "next/image";
 import { LuExternalLink } from "react-icons/lu";
 import { FiGithub } from "react-icons/fi";
 
@@ -38,7 +38,7 @@ export default function Projects() {
             </div>
             <p className="text-stone-500 italic my-2">{project.description}</p>
             <p className="mb-1">
-              {project.technoliges.toLocaleString().replaceAll(",", " ")}
+              {project.technoliges.toLocaleString().replaceAll(",", " - ")}
             </p>
           </div>
         ))}

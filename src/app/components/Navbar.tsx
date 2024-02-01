@@ -1,5 +1,4 @@
 import ThemeSwitch from "./ThemeSwitch";
-import { FaXTwitter } from "react-icons/fa6";
 import { PiLinkedinLogoBold } from "react-icons/pi";
 import { FiGithub } from "react-icons/fi";
 import { IoLogoTwitch } from "react-icons/io";
@@ -22,13 +21,6 @@ export default function Navbar() {
             target="_blank"
           >
             <PiLinkedinLogoBold className="mx-3 text-2xl" />
-          </a>
-          <a
-            className="hover:text-stone-400 my-auto"
-            href="https://twitter.com/giannidona_dev"
-            target="_blank"
-          >
-            <FaXTwitter className="mx-3 text-2xl" />
           </a>
           <a
             className="hover:text-purple-600 my-auto"

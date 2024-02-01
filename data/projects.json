@@ -16,5 +16,14 @@
     "code": "",
     "demo": "https://sp-coaching.net.ar/",
     "img": "/bienesraices.png"
+  },
+  {
+    "id": 2,
+    "title": "Landingpage Agencia de Viajes",
+    "description": "Landingpage para empresa falsa.",
+    "technoliges": ["ASTRO", "CSS"],
+    "code": "https://github.com/giannidona/travel-agency-landingpage",
+    "demo": "https://landingpage-travel-agency.netlify.app/",
+    "img": "/bienesraices.png"
   }
 ]

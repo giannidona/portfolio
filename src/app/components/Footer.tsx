@@ -15,12 +15,6 @@ export default function Footer() {
         </a>
       </div>
       <div className="mb-2">
-        <span className="mr-9 text-stone-500">Twitter</span>
-        <a className="ml-5" href="https://twitter.com/giannidona_dev">
-          @giannidona_dev
-        </a>
-      </div>
-      <div className="mb-2">
         <span className="mr-7 text-stone-500">Linkedin</span>
         <a className="ml-5" href="https://www.linkedin.com/in/gianidonato/">
           in/gianidonato

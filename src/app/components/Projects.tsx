@@ -1,5 +1,4 @@
 import projects from "../../../data/projects.json";
-import Image from "next/image";
 import { LuExternalLink } from "react-icons/lu";
 import { FiGithub } from "react-icons/fi";
 

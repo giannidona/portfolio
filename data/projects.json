@@ -1,29 +1,10 @@
 [
   {
     "id": 1,
-    "title": "Real State Website",
-    "description": "Página para una empresa de bienes raíces.",
-    "technoliges": ["HTML", "CSS"],
-    "code": "https://github.com/giannidona/PF-Donato",
-    "demo": "https://lucky-croissant-d329ed.netlify.app/",
-    "img": "/bienesraices.png"
-  },
-  {
-    "id": 2,
-    "title": "Landingpage Start Point Coaching",
-    "description": "Página para cliente real.",
-    "technoliges": ["HTML", "CSS"],
-    "code": "",
-    "demo": "https://sp-coaching.net.ar/",
-    "img": "/bienesraices.png"
-  },
-  {
-    "id": 2,
-    "title": "Landingpage Agencia de Viajes",
-    "description": "Landingpage para empresa falsa.",
-    "technoliges": ["ASTRO", "CSS"],
-    "code": "https://github.com/giannidona/travel-agency-landingpage",
-    "demo": "https://landingpage-travel-agency.netlify.app/",
-    "img": "/bienesraices.png"
+    "title": "Playlist Paradise",
+    "description": "Libreria de playlists de Spotify.",
+    "technoliges": ["React - Express - MongoDB"],
+    "code": "https://github.com/giannidona/PlaylistParadise-BackEnd",
+    "demo": ""
   }
 ]

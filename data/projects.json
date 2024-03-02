@@ -1,10 +1,16 @@
 [
   {
     "id": 1,
-    "title": "Playlist Paradise",
-    "description": "Libreria de playlists de Spotify.",
-    "technoliges": ["React - Express - MongoDB"],
-    "code": "https://github.com/giannidona/PlaylistParadise-BackEnd",
-    "demo": ""
+    "title": "Landingpage Bloy",
+    "description": "Landinpage para empresa Bloy.",
+    "demo": "https://bloy-landing.netlify.app/",
+    "img": "/bloy-img.png"
+  },
+  {
+    "id": 2,
+    "title": "Luxury Real State Website",
+    "description": "Sitio web de muestra.",
+    "demo": "https://lucky-croissant-d329ed.netlify.app/",
+    "img": "/luxury-img.png"
   }
 ]

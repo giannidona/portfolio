@@ -1,6 +1,8 @@
 import projects from "../../../data/projects.json";
 import { LuExternalLink } from "react-icons/lu";
-import { FiGithub } from "react-icons/fi";
+import Image from "next/image";
+
+// import { FiGithub } from "react-icons/fi";
 
 export default function Projects() {
   return (
@@ -9,36 +11,30 @@ export default function Projects() {
       <div>
         {projects.map((project) => (
           <div
-            className="border-2 border-black dark:border-white rounded-md m-auto mb-5 p-2"
+            className="border-2 border-black dark:border-white rounded-md m-auto mb-5 px-3 py-5 flex"
             key={project.id}
           >
-            <div className="flex justify-between">
-              <div className="flex my-auto">
-                <p className="font-bold">{project.title}</p>
-                {project.demo && (
-                  <a
-                    className="text-md mx-2 my-auto"
-                    href={project.demo}
-                    target="_blank"
-                  >
+            <div className="block w-full">
+              <div className="my-auto">
+                <a
+                  className="text-md my-auto flex justify-between"
+                  href={project.demo}
+                  target="_blank"
+                >
+                  <p className="font-bold flex hover:underline">
+                    {project.title}
+                  </p>
+                  <span className="my-auto transition duration-700 ease-in-out hover:-translate-y-1">
                     <LuExternalLink />
-                  </a>
-                )}
-                {project.code && (
-                  <a
-                    className="text-md mx-2 my-auto"
-                    href={project.code}
-                    target="_blank"
-                  >
-                    <FiGithub />
-                  </a>
-                )}
+                  </span>
+                </a>
+              </div>
+              <div>
+                <p className="text-stone-500 italic mt-2">
+                  {project.description}
+                </p>
               </div>
             </div>
-            <p className="text-stone-500 italic my-2">{project.description}</p>
-            <p className="mb-1">
-              {project.technoliges.toLocaleString().replaceAll(",", " - ")}
-            </p>
           </div>
         ))}
       </div>

@@ -1,0 +1,8 @@
+[
+  {
+    "link": "https://github.com/giannidona/indy",
+    "title": "INDY UI",
+    "description": "components library for indie hackers.",
+    "tecnologies": ["nextjs", "tailwindcss"]
+  }
+]

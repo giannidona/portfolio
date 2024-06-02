@@ -11,15 +11,15 @@ export const Navbar = () => {
       </Link>
       <Link
         className="mr-6 text-stone-400 font-semibold antialiased hover:text-white transition duration-200 ease-in-out"
-        href={"/about"}
+        href={"#projects"}
       >
-        About
+        Projects
       </Link>
       <Link
         className="mr-6 text-stone-400 font-semibold antialiased hover:text-white transition duration-200 ease-in-out"
-        href={"/projects"}
+        href={"#contact"}
       >
-        Projects
+        Contact
       </Link>
     </nav>
   );

@@ -5,7 +5,10 @@ import { SiMongodb, SiTailwindcss } from "react-icons/si";
 export const Main = () => {
   return (
     <main id="home" className="py-5 text-center">
-      <h1 className="text-3xl md:text-5xl font-semibold antialiased">
+      <span className="bg-green-500/30 w-fit px-2 my-auto rounded text-xs border border-green-500 antialiased">
+        available to work
+      </span>
+      <h1 className="mt-2 text-3xl md:text-5xl font-semibold antialiased">
         Gianluca Donato
       </h1>
       <h2 className="font-light md:text-xl">Frontend Developer</h2>

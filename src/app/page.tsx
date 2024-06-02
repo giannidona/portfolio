@@ -1,4 +1,12 @@
-import { Main, Navbar, Projects, Blog, Content, Footer } from "@/components";
+import {
+  Main,
+  Navbar,
+  Projects,
+  Blog,
+  Content,
+  Footer,
+  Contact,
+} from "@/components";
 
 export default function Home() {
   return (
@@ -8,6 +16,7 @@ export default function Home() {
       <Projects />
       <Blog />
       <Content />
+      <Contact />
       <Footer />
     </>
   );

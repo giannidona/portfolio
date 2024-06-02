@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
-import Navbar from "./components/Navbar";
+import { Inter_Tight } from "next/font/google";
 import "./globals.css";
-import { Providers } from "./providers";
 
-const nunito = Nunito({
+const inter = Inter_Tight({
   subsets: ["latin"],
 });
 
@@ -19,12 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
-      <body className={nunito.className}>
-        <Providers>
-          <Navbar />
-          {children}
-        </Providers>
+    <html lang="en">
+      <body className={inter.className}>
+        <div className="w-[90%] lg:w-[35%] mx-auto">{children}</div>
       </body>
     </html>
   );

@@ -1,14 +1,13 @@
-import Main from "./components/Main";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Footer from "./components/Footer";
+import { Main, Navbar, Projects, Blog, Content, Footer } from "@/components";
 
 export default function Home() {
   return (
     <>
+      <Navbar />
       <Main />
       <Projects />
-      <Skills />
+      <Blog />
+      <Content />
       <Footer />
     </>
   );

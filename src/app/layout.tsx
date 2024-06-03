@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "../components/Navbar";
+import { Footer } from "@/components";
 
 const inter = Inter_Tight({
   subsets: ["latin"],
@@ -19,7 +21,11 @@ export default function RootLayout({
   return (
     <html className="scroll-smooth" lang="en">
       <body className={inter.className}>
-        <div className="w-[90%] lg:max-w-xl mx-auto ">{children}</div>
+        <div className="w-[90%] lg:max-w-xl mx-auto ">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

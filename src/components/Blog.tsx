@@ -1,6 +1,20 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
+import blog from "../data/blog.json";
 
 export const Blog = () => {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const handleMouseEnter = (index: number) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
+
   return (
     <section id="blog" className="py-5">
       <h3 className="text-xl font-bold">My Blog 📚</h3>
@@ -8,39 +22,23 @@ export const Blog = () => {
         I talk about topics related to programming (in spanish).
       </p>
       <div className="py-5">
-        <div className="mb-3">
-          <Link
-            href="https://giannidona-newsletter.netlify.app/posts/post-3/"
-            target="_blank"
-          >
-            <div className="flex justify-between items-center">
-              <p className="font-semibold">The perfect does not exist.</p>
-              <p className="font-light text-sm">April 4, 2024</p>
-            </div>
-          </Link>
-        </div>
-        <div className="mb-3">
-          <Link
-            href="https://giannidona-newsletter.netlify.app/posts/post-6/"
-            target="_blank"
-          >
-            <div className="flex justify-between items-center">
-              <p className="font-semibold">My stack for this year.</p>
-              <p className="font-light text-sm">May 10, 2024</p>
-            </div>
-          </Link>
-        </div>
-        <div className="mb-3">
-          <Link
-            href="https://giannidona-newsletter.netlify.app/posts/post-8/"
-            target="_blank"
-          >
-            <div className="flex justify-between items-center">
-              <p className="font-semibold">Consistency.</p>
-              <p className="font-light text-sm">May 24, 2024</p>
-            </div>
-          </Link>
-        </div>
+        {blog.map((blog, index) => (
+          <div key={blog.title} className="mb-3">
+            <Link
+              href={blog.link}
+              target="_blank"
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div
+                className={`flex justify-between items-center duration-300 ease-in-out transition ${hoveredIndex === index ? "text-white" : hoveredIndex !== null ? "text-white/50" : "text-white"}`}
+              >
+                <p className="font-semibold">{blog.title}</p>
+                <p className="font-light text-sm">{blog.date}</p>
+              </div>
+            </Link>
+          </div>
+        ))}
       </div>
     </section>
   );

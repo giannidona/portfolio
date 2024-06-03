@@ -8,7 +8,7 @@ export const Contact = () => {
         <p className="font-light text-white/50">
           You can discover more about my professional endeavors on{" "}
           <Link
-            className="underline text-white"
+            className="underline text-white font-medium"
             href="https://www.linkedin.com/in/gianidonato/"
             target="_blank"
           >
@@ -16,7 +16,7 @@ export const Contact = () => {
           </Link>{" "}
           and{" "}
           <Link
-            className="underline text-white"
+            className="underline text-white font-medium"
             href="https://x.com/giannidona_dev"
             target="_blank"
           >
@@ -24,7 +24,7 @@ export const Contact = () => {
           </Link>
           , and explore my coding projects on{" "}
           <Link
-            className="underline text-white"
+            className="underline text-white font-medium"
             href="https://github.com/giannidona"
             target="_blank"
           >
@@ -32,7 +32,7 @@ export const Contact = () => {
           </Link>
           . Feel free to reach out to me via{" "}
           <Link
-            className="underline text-white"
+            className="underline text-white font-medium"
             href="mailto:gianlucadonato2005@gmail.com"
             target="_blank"
           >

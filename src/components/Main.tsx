@@ -11,7 +11,7 @@ export const Main = () => {
       <h1 className="mt-2 text-3xl md:text-5xl font-semibold antialiased">
         Gianluca Donato
       </h1>
-      <h2 className="font-light md:text-xl">Frontend Developer</h2>
+      <h2 className="font-light md:text-xl">Fullstack Developer</h2>
       <div className="py-5">
         <p className="mb-2 font-semibold md:text-lg">Main stack:</p>
         <div className="flex gap-x-3 justify-center items-center text-3xl text-white/50">

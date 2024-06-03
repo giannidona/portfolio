@@ -1,8 +1,18 @@
 [
   {
-    "link": "https://github.com/giannidona/indy",
-    "title": "INDY UI",
-    "description": "components library for indie hackers.",
-    "tecnologies": ["nextjs", "tailwindcss"]
+    "slug": "indy-ui",
+    "title": "indy ui",
+    "tldr": "components library for indie hackers.",
+    "tecnologies": ["nextjs", "tailwindcss"],
+    "status": "building",
+    "github": "https://github.com/giannidona/indy",
+    "demo": "",
+    "video": "video link",
+    "description": [
+      "Project developed using nextjs and tailwindcss.",
+      "This is a UI component library aimed at indie hackers. All the components included, and those that will be added, are programmed by me, drawing inspiration from various SaaS websites.",
+      "The goal is to contribute to the community, allowing developers to focus more on their products without wasting time on design.",
+      "This is a project I have wanted to undertake for a long time, and now that I have a better understanding of Next.js, I am making it happen. I plan to improve it over time, adding more components and possibly turning it into an npm package."
+    ]
   }
 ]

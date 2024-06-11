@@ -6,8 +6,8 @@
     "tecnologies": ["nextjs", "tailwindcss"],
     "status": "building",
     "github": "https://github.com/giannidona/indy",
-    "demo": "",
-    "video": "video link",
+    "demo": "https://indy-ui.vercel.app/",
+    "video": "/indy-ui.mp4",
     "description": [
       "Project developed using nextjs and tailwindcss.",
       "This is a UI component library aimed at indie hackers. All the components included, and those that will be added, are programmed by me, drawing inspiration from various SaaS websites.",

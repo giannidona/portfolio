@@ -24,24 +24,32 @@ export default function ProductInfoPage({ params }: Props) {
         </h1>
       </div>
       <div className="mb-10">
-        {/* <video
+        <video
           autoPlay
           loop
           controls
           className="rounded-lg relative z-30"
-          src="/vid-example.mp4"
+          src={project.video}
         >
-          <source src="/vid-example.mp4" />
-        </video> */}
+          <source src={project.video} />
+        </video>
       </div>
       <div className="pb-5 text-center">
         {project?.github && (
-          <Link className="mr-5" href={project.github} target="_blank">
+          <Link
+            className="mr-5 hover:underline"
+            href={project.github}
+            target="_blank"
+          >
             github
           </Link>
         )}
         {project?.demo && (
-          <Link className="mr-5" href={project.demo} target="_blank">
+          <Link
+            className="mr-5 hover:underline"
+            href={project.demo}
+            target="_blank"
+          >
             demo
           </Link>
         )}

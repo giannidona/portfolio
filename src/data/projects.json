@@ -14,5 +14,22 @@
       "The goal is to contribute to the community, allowing developers to focus more on their products without wasting time on design.",
       "This is a project I have wanted to undertake for a long time, and now that I have a better understanding of Next.js, I am making it happen. I plan to improve it over time, adding more components and possibly turning it into an npm package."
     ]
+  },
+  {
+    "slug": "manage-inventory",
+    "title": "manage inventory",
+    "tldr": "components library for indie hackers.",
+    "tecnologies": ["nextjs", "tailwindcss", "prisma", "postgresql"],
+    "status": "finished",
+    "github": "https://github.com/giannidona/manage-inventory",
+    "demo": "",
+    "video": "/manage-inventory.mp4",
+    "description": [
+      "Project developed using nextjs, tailwindcss, prisma and postgresql.",
+      "It's an inventory manager that includes CRUD operations and item filtering. I built it to continue learning Next.js and also to learn Prisma and PostgreSQL.",
+      "The database is hosted on Neon Serverless Postgres.",
+      "I learned how to connect PostgreSQL with Prisma, practicing by creating an 'actions' folder and importing functions into components for communication.",
+      "Afterwards, there are simple things like using useState to retrieve data from creation and update item forms, and basic route handling."
+    ]
   }
 ]

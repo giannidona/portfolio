@@ -16,14 +16,19 @@ export const Projects = () => {
                     building
                   </span>
                 ) : (
-                  ""
+                  <span className="bg-pink-500/30 px-2 my-auto rounded text-xs border border-pink-500 antialiased">
+                    finished
+                  </span>
                 )}
               </div>
               <p className="font-light mb-1">{project.tldr}</p>
               <div className="flex justify-between">
                 <div className="flex">
                   {project.tecnologies.map((tecnologie) => (
-                    <p className="mr-3 tracking-wider" key={tecnologie}>
+                    <p
+                      className="rounded border px-2 border-white/50 mr-3 tracking-wider"
+                      key={tecnologie}
+                    >
                       {tecnologie}
                     </p>
                   ))}

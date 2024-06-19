@@ -31,5 +31,19 @@
       "I learned how to connect PostgreSQL with Prisma, practicing by creating an 'actions' folder and importing functions into components for communication.",
       "Afterwards, there are simple things like using useState to retrieve data from creation and update item forms, and basic route handling."
     ]
+  },
+  {
+    "slug": "bloy",
+    "title": "bloy",
+    "tldr": "landingpage for bloy.",
+    "tecnologies": ["html", "css", "javascript"],
+    "status": "finished",
+    "github": "",
+    "demo": "https://bloy.tech/",
+    "video": "/bloy.mp4",
+    "description": [
+      "Project developed using html, css, and a bit of javascript.",
+      "It was a complete redesign for the company, fully adapted for mobile. I also used some Bootstrap components and SweetAlert."
+    ]
   }
 ]

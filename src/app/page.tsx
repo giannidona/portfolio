@@ -1,3 +1,10 @@
+import { AboutMe, MainSection, TechStack } from "@/components";
 export default function Home() {
-  return <h1>Gianluca Donato Portfolio</h1>;
+  return (
+    <div className="mx-auto w-[90%] xl:w-[45%]">
+      <MainSection />
+      <AboutMe />
+      <TechStack />
+    </div>
+  );
 }

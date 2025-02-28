@@ -1,25 +1,33 @@
 import type { Metadata } from "next";
-import { Inter_Tight } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter_Tight({
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: "Gianluca Donato",
-  description: "Portfolio de Gianluca Donato",
+  description: "Gianluca Donato Portfolio & Blog",
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html className="scroll-smooth" lang="en">
-      <body className={inter.className}>
-        <div className="w-[90%] lg:max-w-xl mx-auto ">{children}</div>
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
       </body>
     </html>
   );

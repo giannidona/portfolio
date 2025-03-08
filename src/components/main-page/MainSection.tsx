@@ -1,6 +1,6 @@
 export const MainSection = () => {
   return (
-    <div>
+    <div className="mt-15">
       <h1 className="mb-2 text-2xl font-bold">Gianluca Donato</h1>
       <h2 className="mb-2 text-slate-700">
         Web Developer based in Buenos Aires (Caba), Argentina.{" "}

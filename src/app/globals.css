@@ -14,3 +14,16 @@
 .animate-page-enter {
   animation: page-enter 0.7s ease-out forwards;
 }
+
+/* Swiper: estilos mínimos para el slider (evita importar swiper/css) */
+.swiper {
+  overflow: hidden;
+  position: relative;
+}
+.swiper-wrapper {
+  display: flex;
+  transition-property: transform;
+}
+.swiper-slide {
+  flex-shrink: 0;
+}

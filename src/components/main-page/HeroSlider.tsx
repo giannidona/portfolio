@@ -5,8 +5,6 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode } from "swiper/modules";
 import { Title } from "../ui/Title";
-import "swiper/css";
-import "swiper/css/free-mode";
 
 const HERO_IMAGES = [
   "landing-lexa.png",
@@ -35,7 +33,7 @@ export const HeroSlider = () => {
         spaceBetween={12}
         slidesPerView="auto"
         grabCursor
-        className="!overflow-visible !pb-2 cursor-grab active:cursor-grabbing"
+        className="!overflow-hidden !pb-2 cursor-grab active:cursor-grabbing"
       >
         {HERO_IMAGES.map((filename) => (
           <SwiperSlide

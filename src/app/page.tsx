@@ -1,10 +1,11 @@
-import { AboutMe, MainSection, TechStack } from "@/components";
+import { AboutMe, HeroSlider, MainSection, TechStack } from "@/components";
 export default function Home() {
   return (
     <>
       <MainSection />
       <AboutMe />
       <TechStack />
+      <HeroSlider />
     </>
   );
 }

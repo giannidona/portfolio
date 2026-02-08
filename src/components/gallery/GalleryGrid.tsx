@@ -111,7 +111,7 @@ export function GalleryGrid({ images }: GalleryGridProps) {
       {/* Floating preview: position con transform (GPU), fade in/out suaves */}
       {selected && (
         <div
-          className="pointer-events-none fixed left-0 top-0 z-50 will-change-transform"
+          className="pointer-events-none fixed top-0 left-0 z-50 will-change-transform"
           style={{
             width: PREVIEW_SIZE,
             height: Math.round(PREVIEW_SIZE * 0.75),
@@ -125,7 +125,7 @@ export function GalleryGrid({ images }: GalleryGridProps) {
           }}
           aria-hidden
         >
-          <div className="h-full w-full overflow-hidden rounded-lg border border-white/10 bg-neutral-900 shadow-2xl">
+          <div className="h-full w-full overflow-hidden rounded-lg shadow-2xl">
             <Image
               src={`/heros-jan/${selected}`}
               alt=""

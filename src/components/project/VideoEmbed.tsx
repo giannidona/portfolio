@@ -1,44 +1,21 @@
 type VideoEmbedProps = {
-  url: string;
+  /** Ruta al video en /public, ej. /videos/stock-manager.mp4 */
+  src: string;
   title?: string;
 };
 
-/**
- * Acepta URLs de YouTube (watch o youtu.be) o Vimeo y devuelve el iframe embed.
- */
-function getEmbedUrl(url: string): string | null {
-  try {
-    // YouTube: watch?v=ID o youtu.be/ID
-    const ytMatch =
-      url.match(/(?:youtube\.com\/watch\?v=)([a-zA-Z0-9_-]+)/) ||
-      url.match(/(?:youtu\.be\/)([a-zA-Z0-9_-]+)/);
-    if (ytMatch) {
-      return `https://www.youtube.com/embed/${ytMatch[1]}`;
-    }
-    // Vimeo: vimeo.com/ID
-    const vimeoMatch = url.match(/(?:vimeo\.com\/)(\d+)/);
-    if (vimeoMatch) {
-      return `https://player.vimeo.com/video/${vimeoMatch[1]}`;
-    }
-  } catch {
-    return null;
-  }
-  return null;
-}
-
-export function VideoEmbed({ url, title = "Video" }: VideoEmbedProps) {
-  const embedUrl = getEmbedUrl(url);
-  if (!embedUrl) return null;
-
+export function VideoEmbed({ src, title = "Video" }: VideoEmbedProps) {
   return (
     <div className="aspect-video w-full overflow-hidden rounded-lg bg-neutral-100">
-      <iframe
-        src={embedUrl}
+      <video
+        src={src}
         title={title}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        className="h-full w-full"
-      />
+        controls
+        playsInline
+        className="h-full w-full object-contain"
+      >
+        Your browser does not support the video tag.
+      </video>
     </div>
   );
 }

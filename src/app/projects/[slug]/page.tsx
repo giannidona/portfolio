@@ -66,11 +66,11 @@ export default async function ProjectPage({ params }: Props) {
         ))}
       </div>
 
-      {project.videoUrl && (
+      {project.video && (
         <div className="mt-10">
           <Title title="Video" />
           <div className="mt-4">
-            <VideoEmbed url={project.videoUrl} title={project.name} />
+            <VideoEmbed src={`/videos/${project.video}`} title={project.name} />
           </div>
         </div>
       )}

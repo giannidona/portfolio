@@ -19,7 +19,7 @@ export const SocialLinks = () => {
               rel={
                 href.startsWith("mailto:") ? undefined : "noopener noreferrer"
               }
-              className="text-sm text-neutral-500 underline-offset-2 hover:text-neutral-700 hover:underline"
+              className="text-sm text-stone-500 underline-offset-2 hover:text-stone-700 hover:underline"
             >
               {label}
             </a>

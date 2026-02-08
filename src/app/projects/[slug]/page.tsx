@@ -31,14 +31,14 @@ export default async function ProjectPage({ params }: Props) {
     <div className="my-10">
       <Link
         href="/"
-        className="mb-6 inline-block text-sm text-neutral-500 underline-offset-2 hover:underline"
+        className="mb-6 inline-block text-sm text-stone-500 underline-offset-2 hover:underline"
       >
         ← back
       </Link>
 
       <div className="mb-4">
         <h1
-          className="text-2xl font-bold text-slate-900"
+          className="text-2xl font-bold text-stone-900"
           style={
             {
               viewTransitionName: `project-title-${project.slug}`,
@@ -50,17 +50,17 @@ export default async function ProjectPage({ params }: Props) {
         {project.tech.map((t) => (
           <span
             key={t}
-            className="mr-2 rounded bg-stone-400/20 px-1.5 text-xs font-light text-slate-600"
+            className="mr-2 rounded bg-stone-400/20 px-1.5 text-xs font-light text-stone-600"
           >
             {t}
           </span>
         ))}
       </div>
 
-      <p className="mb-8 text-slate-600">{project.description}</p>
+      <p className="mb-8 text-stone-600">{project.description}</p>
 
       <Title title="How it was developed" />
-      <div className="mt-4 space-y-4 text-slate-700">
+      <div className="space-y-4 text-stone-700">
         {paragraphs.map((p, i) => (
           <p key={i}>{p}</p>
         ))}
@@ -81,7 +81,7 @@ export default async function ProjectPage({ params }: Props) {
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-neutral-500 underline-offset-2 hover:underline"
+            className="text-sm text-stone-500 underline-offset-2 hover:underline"
           >
             See live site →
           </a>

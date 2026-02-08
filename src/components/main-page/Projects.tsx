@@ -10,12 +10,12 @@ export const Projects = () => {
         {projects.map((project) => (
           <li
             key={project.slug}
-            className="border-b border-neutral-100 pb-5 last:border-0 last:pb-0"
+            className="border-b border-stone-200 pb-5 last:border-0 last:pb-0"
           >
             <div>
               <Link
                 href={`/projects/${project.slug}`}
-                className="font-medium text-slate-800 underline-offset-2 hover:underline"
+                className="font-medium text-stone-800 underline-offset-2 hover:underline"
               >
                 <span
                   style={
@@ -31,14 +31,14 @@ export const Projects = () => {
                 {project.tech.map((t) => (
                   <span
                     key={t}
-                    className="rounded bg-stone-400/20 px-1.5 text-xs font-light text-slate-600"
+                    className="rounded bg-stone-400/20 px-1.5 text-xs font-light text-stone-600"
                   >
                     {t}
                   </span>
                 ))}
               </span>
             </div>
-            <p className="mt-1 text-sm text-slate-600">{project.description}</p>
+            <p className="mt-1 text-sm text-stone-600">{project.description}</p>
           </li>
         ))}
       </ul>

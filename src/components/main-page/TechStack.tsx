@@ -10,7 +10,7 @@ export const TechStack = () => {
         {stack.map((tech, index) => (
           <span
             key={index}
-            className="rounded-lg bg-stone-400/20 px-1 font-light text-slate-700"
+            className="rounded-lg bg-stone-400/20 px-1 font-light text-stone-600"
           >
             {tech}
           </span>

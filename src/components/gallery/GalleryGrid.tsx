@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useCallback, useEffect } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 
 type GalleryGridProps = { images: string[] };
@@ -8,6 +9,7 @@ type GalleryGridProps = { images: string[] };
 const IMAGE_EXT = /\.(png|jpg|jpeg|webp|gif)$/i;
 const CURSOR_OFFSET = 24;
 const PREVIEW_SIZE = 320;
+const EDGE_GAP = 8;
 
 export function GalleryGrid({ images }: GalleryGridProps) {
   const [selected, setSelected] = useState<string | null>(null);
@@ -37,10 +39,10 @@ export function GalleryGrid({ images }: GalleryGridProps) {
       const h = typeof window !== "undefined" ? window.innerHeight : 0;
       let x = e.clientX + CURSOR_OFFSET;
       let y = e.clientY + CURSOR_OFFSET;
-      if (w) x = Math.min(x, w - PREVIEW_SIZE - 8);
-      if (h) y = Math.min(y, h - Math.round(PREVIEW_SIZE * 0.75) - 8);
-      x = Math.max(8, x);
-      y = Math.max(8, y);
+      if (w) x = Math.min(x, w - PREVIEW_SIZE - EDGE_GAP);
+      if (h) y = Math.min(y, h - Math.round(PREVIEW_SIZE * 0.75) - EDGE_GAP);
+      x = Math.max(EDGE_GAP, x);
+      y = Math.max(EDGE_GAP, y);
       updatePosition(x, y);
     },
     [updatePosition],
@@ -100,7 +102,7 @@ export function GalleryGrid({ images }: GalleryGridProps) {
                   alt={name}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition duration-300 group-hover:scale-105"
+                  className="object-cover"
                 />
               </div>
             </li>
@@ -108,35 +110,38 @@ export function GalleryGrid({ images }: GalleryGridProps) {
         })}
       </ul>
 
-      {/* Floating preview: position con transform (GPU), fade in/out suaves */}
-      {selected && (
-        <div
-          className="pointer-events-none fixed top-0 left-0 z-50 will-change-transform"
-          style={{
-            width: PREVIEW_SIZE,
-            height: Math.round(PREVIEW_SIZE * 0.75),
-            transform: isClosing
-              ? `translate(${position.x}px, ${position.y}px) scale(0.94)`
-              : `translate(${position.x}px, ${position.y}px) scale(1)`,
-            transition: isClosing
-              ? "opacity 0.28s cubic-bezier(0.4, 0, 0.2, 1), transform 0.28s cubic-bezier(0.4, 0, 0.2, 1)"
-              : "transform 0.22s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
-            opacity: isClosing ? 0 : isVisible ? 1 : 0,
-          }}
-          aria-hidden
-        >
-          <div className="h-full w-full overflow-hidden rounded-lg shadow-2xl">
-            <Image
-              src={`/heros-jan/${selected}`}
-              alt=""
-              width={PREVIEW_SIZE}
-              height={Math.round(PREVIEW_SIZE * 0.75)}
-              className="h-full w-full object-cover"
-              sizes={`${PREVIEW_SIZE}px`}
-            />
-          </div>
-        </div>
-      )}
+      {/* Preview en portal a body para que fixed sea respecto al viewport (cursor) */}
+      {selected &&
+        typeof document !== "undefined" &&
+        createPortal(
+          <div
+            className="pointer-events-none fixed top-0 left-0 z-[9999] will-change-transform"
+            style={{
+              width: PREVIEW_SIZE,
+              height: Math.round(PREVIEW_SIZE * 0.75),
+              transform: isClosing
+                ? `translate(${position.x}px, ${position.y}px) scale(0.94)`
+                : `translate(${position.x}px, ${position.y}px) scale(1)`,
+              transition: isClosing
+                ? "opacity 0.28s cubic-bezier(0.4, 0, 0.2, 1), transform 0.28s cubic-bezier(0.4, 0, 0.2, 1)"
+                : "transform 0.22s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+              opacity: isClosing ? 0 : isVisible ? 1 : 0,
+            }}
+            aria-hidden
+          >
+            <div className="h-full w-full overflow-hidden rounded-lg shadow-2xl">
+              <Image
+                src={`/heros-jan/${selected}`}
+                alt=""
+                width={PREVIEW_SIZE}
+                height={Math.round(PREVIEW_SIZE * 0.75)}
+                className="h-full w-full object-cover"
+                sizes={`${PREVIEW_SIZE}px`}
+              />
+            </div>
+          </div>,
+          document.body,
+        )}
     </>
   );
 }

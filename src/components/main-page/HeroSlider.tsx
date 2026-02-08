@@ -14,32 +14,55 @@ const HERO_IMAGES = [
   "ecom-tartas.png",
 ];
 
-const FRICTION = 0.92;
-const MIN_VELOCITY = 0.3;
+const FRICTION = 0.94;
+const MIN_VELOCITY = 0.15;
+const VELOCITY_MULTIPLIER = 1.4;
+const BOUNCE_FACTOR = 0.35;
+const SNAP_DURATION_MS = 280;
 
 export const HeroSlider = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const startX = useRef(0);
   const scrollLeftStart = useRef(0);
   const rafId = useRef<number | null>(null);
-  const lastMove = useRef<{ x: number; t: number } | null>(null);
+  const velocityHistory = useRef<{ x: number; t: number }[]>([]);
   const inertiaId = useRef<number | null>(null);
+  const snapId = useRef<number | null>(null);
+
+  const cancelAllAnimations = useCallback(() => {
+    if (rafId.current !== null) {
+      cancelAnimationFrame(rafId.current);
+      rafId.current = null;
+    }
+    if (inertiaId.current !== null) {
+      cancelAnimationFrame(inertiaId.current);
+      inertiaId.current = null;
+    }
+    if (snapId.current !== null) {
+      cancelAnimationFrame(snapId.current);
+      snapId.current = null;
+    }
+  }, []);
 
   const handleMouseDown = useCallback((e: React.MouseEvent) => {
     if (!scrollRef.current) return;
     e.preventDefault();
+    cancelAllAnimations();
     setIsDragging(true);
     startX.current = e.clientX;
     scrollLeftStart.current = scrollRef.current.scrollLeft;
-    lastMove.current = { x: e.clientX, t: performance.now() };
-  }, []);
+    velocityHistory.current = [{ x: e.clientX, t: performance.now() }];
+  }, [cancelAllAnimations]);
 
   const handleMouseMove = useCallback(
     (e: React.MouseEvent) => {
       if (!isDragging || !scrollRef.current) return;
       e.preventDefault();
-      lastMove.current = { x: e.clientX, t: performance.now() };
+      const history = velocityHistory.current;
+      history.push({ x: e.clientX, t: performance.now() });
+      if (history.length > 8) history.shift();
       const dx = startX.current - e.clientX;
       const targetScroll = scrollLeftStart.current + dx;
       if (rafId.current !== null) cancelAnimationFrame(rafId.current);
@@ -53,9 +76,20 @@ export const HeroSlider = () => {
     [isDragging],
   );
 
-  const runInertia = useCallback((velocityPxPerMs: number) => {
+  const getVelocity = useCallback((): number => {
+    const history = velocityHistory.current;
+    if (history.length < 2) return 0;
+    const recent = history[history.length - 1];
+    const old = history[Math.max(0, history.length - 5)];
+    const dt = (recent.t - old.t) / 1000;
+    if (dt <= 0) return 0;
+    const dx = startX.current - recent.x;
+    return (dx / dt) * VELOCITY_MULTIPLIER;
+  }, []);
+
+  const runInertia = useCallback((initialVelocityPxPerMs: number) => {
     if (!scrollRef.current) return;
-    let v = velocityPxPerMs;
+    let v = initialVelocityPxPerMs;
     const el = scrollRef.current;
     const maxScroll = el.scrollWidth - el.clientWidth;
     if (maxScroll <= 0) return;
@@ -63,58 +97,91 @@ export const HeroSlider = () => {
     const tick = () => {
       if (!scrollRef.current) return;
       const el = scrollRef.current;
-      el.scrollLeft += v * 16;
+      const maxScroll = el.scrollWidth - el.clientWidth;
+      const next = el.scrollLeft + v * 16;
+      if (next < 0) {
+        el.scrollLeft = 0;
+        v = -v * BOUNCE_FACTOR;
+      } else if (next > maxScroll) {
+        el.scrollLeft = maxScroll;
+        v = -v * BOUNCE_FACTOR;
+      } else {
+        el.scrollLeft = next;
+      }
       v *= FRICTION;
-      if (el.scrollLeft <= 0 || el.scrollLeft >= maxScroll) v *= 0.8;
-      el.scrollLeft = Math.max(0, Math.min(maxScroll, el.scrollLeft));
       if (Math.abs(v) > MIN_VELOCITY) {
         inertiaId.current = requestAnimationFrame(tick);
       } else {
         inertiaId.current = null;
       }
     };
-    if (inertiaId.current !== null) cancelAnimationFrame(inertiaId.current);
+    cancelAllAnimations();
     inertiaId.current = requestAnimationFrame(tick);
-  }, []);
+  }, [cancelAllAnimations]);
+
+  const snapTo = useCallback((target: number) => {
+    if (!scrollRef.current) return;
+    const el = scrollRef.current;
+    const start = el.scrollLeft;
+    const startTime = performance.now();
+
+    const tick = () => {
+      if (!scrollRef.current) return;
+      const elapsed = performance.now() - startTime;
+      const t = Math.min(elapsed / SNAP_DURATION_MS, 1);
+      const eased = 1 - (1 - t) * (1 - t);
+      scrollRef.current!.scrollLeft = start + (target - start) * eased;
+      if (t < 1) {
+        snapId.current = requestAnimationFrame(tick);
+      } else {
+        snapId.current = null;
+      }
+    };
+    cancelAllAnimations();
+    snapId.current = requestAnimationFrame(tick);
+  }, [cancelAllAnimations]);
 
   const handleMouseUp = useCallback(() => {
-    if (!scrollRef.current || !lastMove.current) {
+    if (!scrollRef.current) {
       setIsDragging(false);
       return;
     }
-    const now = performance.now();
-    const last = lastMove.current;
-    const dt = now - last.t;
-    if (dt > 0 && dt < 150) {
-      const dx = startX.current - last.x;
-      const velocityPxPerMs = dx / dt;
-      runInertia(velocityPxPerMs);
+    const v = getVelocity();
+    if (Math.abs(v) > 0.05) {
+      runInertia(v);
     }
     setIsDragging(false);
-  }, [runInertia]);
+  }, [getVelocity, runInertia]);
 
   const handleMouseLeave = useCallback(() => {
-    if (isDragging && scrollRef.current && lastMove.current) {
-      const now = performance.now();
-      const last = lastMove.current;
-      const dt = now - last.t;
-      if (dt > 0 && dt < 150) {
-        const dx = startX.current - last.x;
-        runInertia(dx / dt);
-      }
+    if (!isDragging || !scrollRef.current) {
+      setIsDragging(false);
+      return;
+    }
+    const el = scrollRef.current;
+    const maxScroll = el.scrollWidth - el.clientWidth;
+    if (maxScroll <= 0) {
+      setIsDragging(false);
+      return;
+    }
+    const dx = startX.current - (velocityHistory.current[velocityHistory.current.length - 1]?.x ?? startX.current);
+    if (dx > 20) {
+      snapTo(maxScroll);
+    } else if (dx < -20) {
+      snapTo(0);
+    } else {
+      const v = getVelocity();
+      if (Math.abs(v) > 0.05) runInertia(v);
     }
     setIsDragging(false);
-  }, [isDragging, runInertia]);
+  }, [isDragging, getVelocity, runInertia, snapTo]);
 
   useEffect(() => {
-    return () => {
-      if (rafId.current !== null) cancelAnimationFrame(rafId.current);
-      if (inertiaId.current !== null) cancelAnimationFrame(inertiaId.current);
-    };
-  }, []);
+    return cancelAllAnimations;
+  }, [cancelAllAnimations]);
 
   return (
-    <div className="my-10">
+    <div ref={containerRef} className="my-10">
       <Title title="Some Designs" />
       <div
         ref={scrollRef}

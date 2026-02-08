@@ -9,7 +9,7 @@ const links = [
 export const SocialLinks = () => {
   return (
     <div className="my-10">
-      <Title title="Redes" />
+      <Title title="Social Links" />
       <ul className="flex flex-wrap gap-x-6 gap-y-1">
         {links.map(({ label, href }) => (
           <li key={label}>

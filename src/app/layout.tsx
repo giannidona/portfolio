@@ -15,7 +15,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.className} antialiased`}>
+      <body
+        className={`${geistSans.className} antialiased`}
+        suppressHydrationWarning
+      >
         <div className="mx-auto w-[90%] py-8 lg:w-[35%]">
           <Navbar />
           {children}

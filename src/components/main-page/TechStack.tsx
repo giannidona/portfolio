@@ -6,7 +6,7 @@ export const TechStack = () => {
   return (
     <div className="my-10">
       <Title title="Tech Stack" />
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2">
         {stack.map((tech, index) => (
           <span
             key={index}

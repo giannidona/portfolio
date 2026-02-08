@@ -28,12 +28,15 @@ export const HeroSlider = () => {
     scrollLeftStart.current = scrollRef.current.scrollLeft;
   }, []);
 
-  const handleMouseMove = useCallback((e: React.MouseEvent) => {
-    if (!isDragging || !scrollRef.current) return;
-    e.preventDefault();
-    const dx = startX.current - e.clientX;
-    scrollRef.current.scrollLeft = scrollLeftStart.current + dx;
-  }, [isDragging]);
+  const handleMouseMove = useCallback(
+    (e: React.MouseEvent) => {
+      if (!isDragging || !scrollRef.current) return;
+      e.preventDefault();
+      const dx = startX.current - e.clientX;
+      scrollRef.current.scrollLeft = scrollLeftStart.current + dx;
+    },
+    [isDragging],
+  );
 
   const handleMouseUp = useCallback(() => {
     setIsDragging(false);
@@ -45,10 +48,10 @@ export const HeroSlider = () => {
 
   return (
     <div className="my-10">
-      <Title title="Work" />
+      <Title title="Some Designs" />
       <div
         ref={scrollRef}
-        className="relative -mx-0 mt-4 flex cursor-grab gap-3 overflow-x-auto py-2 scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden active:cursor-grabbing"
+        className="relative -mx-0 flex cursor-grab gap-3 overflow-x-auto scroll-smooth py-2 [scrollbar-width:none] active:cursor-grabbing [&::-webkit-scrollbar]:hidden"
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
@@ -76,7 +79,7 @@ export const HeroSlider = () => {
           href="/gallery"
           className="text-xs text-neutral-500 underline-offset-2 hover:text-neutral-700 hover:underline"
         >
-          ver más
+          see more
         </Link>
       </div>
     </div>

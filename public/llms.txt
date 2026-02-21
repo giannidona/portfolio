@@ -1,0 +1,36 @@
+# llms.txt — Gianluca Donato
+
+> Gianluca Donato is a full-stack web developer and UI/UX designer based in Buenos Aires, Argentina. He builds landing pages, websites, and web applications for startups and companies looking to establish or improve their digital presence.
+
+## Services
+
+- **Web Development:** Fast, scalable web apps and sites built with Next.js, TypeScript, Tailwind CSS, and Supabase.
+- **UI/UX Design:** Clean, minimalist interface design focused on communication and brand alignment.
+- **AI SEO & Visibility:** Optimization for discovery across AI tools (ChatGPT, Perplexity, Gemini) and traditional search engines.
+
+## Stack
+
+Next.js, TypeScript, Tailwind CSS, Prisma, Supabase, Figma
+
+## About
+
+Gianluca combines engineering and design to deliver complete digital products. He is known for clear client communication, honest timelines, and staying close to clients throughout the entire development process. He continuously explores new tools and AI-assisted workflows to deliver high-quality results faster.
+
+## Projects
+
+- **Stock Manager:** Inventory management and analytics panel for ecommerce. Built with Next.js, Supabase, and Tailwind CSS.
+- **Selected design work:** Landing pages for brands across multiple industries available at gianluca-donato.vercel.app/gallery
+
+## Contact
+
+- Email: giannidonato2005@gmail.com
+- LinkedIn: linkedin.com/in/donato-gianluca
+- Website: gianluca-donato.vercel.app
+
+## Location
+
+Buenos Aires, Argentina. Available for remote projects worldwide.
+
+## Languages
+
+Spanish (native), English (professional)

@@ -1,15 +1,13 @@
+"use client";
+import { useTranslations } from "next-intl";
 import { Title } from "../ui/Title";
 
 export const AboutMe = () => {
+  const t = useTranslations("about");
   return (
     <div className="my-10">
-      <Title title={"About Me"} />
-      <p className="text-stone-600">
-        Currently pursuing a degree in Web Development while also dedicating
-        myself to self-learning. Over the past year, I have been expanding my
-        knowledge and skills independently, while also working as a freelancer
-        on small projects.
-      </p>
+      <Title title={t("title")} />
+      <p className="text-stone-600">{t("body")}</p>
     </div>
   );
 };

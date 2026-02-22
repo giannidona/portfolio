@@ -1,0 +1,52 @@
+{
+  "main": {
+    "name": "Gianluca Donato",
+    "role": "Desarrollador & Diseñador Web — Buenos Aires, Argentina.",
+    "available": "Disponible para proyectos"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "body": "Desarrollador web y diseñador que trabaja en la intersección entre ingeniería y diseño. Construyo landings, sitios web y aplicaciones usando herramientas modernas — Next.js, Tailwind, Supabase — e integro IA en el proceso para entregar más rápido sin sacrificar calidad. Me mantengo cerca de las personas con las que trabajo: comunicación clara, plazos honestos y actualizaciones durante todo el proceso. Siempre explorando nuevas herramientas y formas de hacer las cosas."
+  },
+  "stack": {
+    "title": "Tech Stack"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "back": "← volver",
+    "howDeveloped": "Cómo se desarrolló",
+    "video": "Video",
+    "seeLive": "Ver sitio en vivo →",
+    "items": [
+      {
+        "slug": "stock-manager",
+        "name": "Stock Manager 📦",
+        "description": "Panel de gestión de inventario y analíticas para un ecommerce que opera en MercadoLibre. Centraliza listings, links de distribuidores, stock propio y registro por escaneo.",
+        "story": "Trabajo en un negocio de ecommerce que opera a través de MercadoLibre, involucrado activamente en las operaciones diarias y en la optimización de procesos internos mediante soluciones digitales. Colaboro en áreas clave como control de inventario, análisis de productos y organización operativa.\n\nDesarrollé una aplicación web interna para gestión de productos y stock que centraliza información crítica del negocio. La herramienta permite gestionar listings de MercadoLibre, acceder a links de distribuidores, manejar stock desde una base de datos propia y registrar productos por escaneo — reduciendo significativamente las tareas manuales y mejorando el control de inventario."
+      }
+    ]
+  },
+  "designs": {
+    "title": "Algunos Diseños",
+    "seeMore": "ver más",
+    "noImages": "No hay imágenes en heros-jan."
+  },
+  "social": {
+    "title": "Contacto",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "href": "https://linkedin.com/in/donato-gianluca"
+      },
+      { "label": "Twitter", "href": "https://twitter.com/giannidona_dev" },
+      { "label": "Gmail", "href": "mailto:giannidonato2005@gmail.com" }
+    ]
+  },
+  "footer": {
+    "thanks": "Gracias por tomarte el tiempo de leer esto. 🖤"
+  },
+  "nav": {
+    "home": "inicio",
+    "gallery": "galería"
+  }
+}

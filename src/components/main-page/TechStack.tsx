@@ -1,11 +1,14 @@
+"use client";
+import { useTranslations } from "next-intl";
 import { Title } from "../ui/Title";
 
 const stack = ["next", "typescript", "tailwindcss", "supabase"];
 
 export const TechStack = () => {
+  const t = useTranslations("stack");
   return (
     <div className="my-10">
-      <Title title="Tech Stack" />
+      <Title title={t("title")} />
       <div className="flex flex-wrap gap-2">
         {stack.map((tech, index) => (
           <span

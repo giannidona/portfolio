@@ -1,18 +1,25 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getProjectBySlug, getAllProjectSlugs } from "@/data/projects";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/lib/navigation";
+import { getProjectMeta, getAllProjectSlugs } from "@/data/projectMeta";
 import { VideoEmbed } from "@/components/project/VideoEmbed";
 import { Title } from "@/components/ui/Title";
 
-type Props = { params: Promise<{ slug: string }> };
+type Props = { params: Promise<{ locale: string; slug: string }> };
 
 export async function generateStaticParams() {
-  return getAllProjectSlugs().map((slug) => ({ slug }));
+  const slugs = getAllProjectSlugs();
+  const locales = ["en", "es"] as const;
+  return locales.flatMap((locale) =>
+    slugs.map((slug) => ({ locale, slug }))
+  );
 }
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
-  const project = getProjectBySlug(slug);
+  const t = await getTranslations("projects");
+  const items = t.raw("items") as Array<{ slug: string; name: string; description: string }>;
+  const project = items.find((p) => p.slug === slug);
   if (!project) return { title: "Project" };
   return {
     title: `${project.name} | Gianluca Donato`,
@@ -22,7 +29,17 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function ProjectPage({ params }: Props) {
   const { slug } = await params;
-  const project = getProjectBySlug(slug);
+  const meta = getProjectMeta(slug);
+  if (!meta) notFound();
+
+  const t = await getTranslations("projects");
+  const items = t.raw("items") as Array<{
+    slug: string;
+    name: string;
+    description: string;
+    story: string;
+  }>;
+  const project = items.find((p) => p.slug === slug);
   if (!project) notFound();
 
   const paragraphs = project.story.split("\n\n").filter(Boolean);
@@ -33,7 +50,7 @@ export default async function ProjectPage({ params }: Props) {
         href="/"
         className="mb-6 inline-block text-sm text-stone-500 underline-offset-2 hover:underline"
       >
-        ← back
+        {t("back")}
       </Link>
 
       <div className="mb-4">
@@ -47,43 +64,43 @@ export default async function ProjectPage({ params }: Props) {
         >
           {project.name}
         </h1>
-        {project.tech.map((t) => (
+        {meta.tech.map((tech) => (
           <span
-            key={t}
+            key={tech}
             className="mr-2 rounded bg-stone-400/20 px-1.5 text-xs font-light text-stone-600"
           >
-            {t}
+            {tech}
           </span>
         ))}
       </div>
 
       <p className="mb-8 text-stone-600">{project.description}</p>
 
-      <Title title="How it was developed" />
+      <Title title={t("howDeveloped")} />
       <div className="space-y-4 text-stone-700">
         {paragraphs.map((p, i) => (
           <p key={i}>{p}</p>
         ))}
       </div>
 
-      {project.video && (
+      {meta.video && (
         <div className="mt-10">
-          <Title title="Video" />
+          <Title title={t("video")} />
           <div className="mt-4">
-            <VideoEmbed src={`/videos/${project.video}`} title={project.name} />
+            <VideoEmbed src={`/videos/${meta.video}`} title={project.name} />
           </div>
         </div>
       )}
 
-      {project.liveUrl && (
+      {meta.liveUrl && (
         <p className="mt-8">
           <a
-            href={project.liveUrl}
+            href={meta.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-stone-500 underline-offset-2 hover:underline"
           >
-            See live site →
+            {t("seeLive")}
           </a>
         </p>
       )}

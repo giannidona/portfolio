@@ -1,13 +1,26 @@
-import Link from "next/link";
+"use client";
+import { useTranslations } from "next-intl";
+import { Link } from "@/lib/navigation";
 import { Title } from "../ui/Title";
-import { projects } from "@/data/projects";
 
 export const Projects = () => {
+  const t = useTranslations("projects");
+  const items = t.raw("items") as Array<{
+    slug: string;
+    name: string;
+    description: string;
+    tech?: string[];
+  }>;
+
+  const techMap: Record<string, string[]> = {
+    "stock-manager": ["Next", "Supabase", "Tailwind"],
+  };
+
   return (
     <div className="my-10">
-      <Title title="Projects" />
+      <Title title={t("title")} />
       <ul className="space-y-6">
-        {projects.map((project) => (
+        {items.map((project) => (
           <li
             key={project.slug}
             className="border-b border-stone-200 pb-5 last:border-0 last:pb-0"
@@ -28,12 +41,12 @@ export const Projects = () => {
                 </span>
               </Link>
               <span className="mt-1 flex flex-wrap gap-1.5">
-                {project.tech.map((t) => (
+                {(techMap[project.slug] || []).map((tech) => (
                   <span
-                    key={t}
+                    key={tech}
                     className="rounded bg-stone-400/20 px-1.5 text-xs font-light text-stone-600"
                   >
-                    {t}
+                    {tech}
                   </span>
                 ))}
               </span>

@@ -1,0 +1,52 @@
+{
+  "main": {
+    "name": "Gianluca Donato",
+    "role": "Web Developer & Designer — Buenos Aires, Argentina.",
+    "available": "Available for projects"
+  },
+  "about": {
+    "title": "About",
+    "body": "Web developer and designer working at the intersection of engineering and design. I build landing pages, websites, and web apps using modern tools — Next.js, Tailwind, Supabase — and integrate AI into the process to deliver faster without cutting corners. I stay close to the people I work with: clear communication, honest timelines, and updates throughout the entire process. Always exploring new tools and better ways to build things."
+  },
+  "stack": {
+    "title": "Tech Stack"
+  },
+  "projects": {
+    "title": "Projects",
+    "back": "← back",
+    "howDeveloped": "How it was developed",
+    "video": "Video",
+    "seeLive": "See live site →",
+    "items": [
+      {
+        "slug": "stock-manager",
+        "name": "Stock Manager 📦",
+        "description": "Inventory management and analytics panel for an ecommerce business operating on MercadoLibre. Centralizes listings, distributor links, stock control, and barcode scanning.",
+        "story": "I work in an e-commerce business that operates through MercadoLibre, actively involved in day-to-day operations and optimizing internal processes through digital solutions. I collaborate in key areas such as inventory control, product analysis, and operational organization.\n\nI developed an internal web application for product and stock management that centralizes critical business information. The tool allows managing MercadoLibre listings, accessing distributor links, handling stock from a proprietary database, and registering products via scanning — significantly reducing manual tasks and improving inventory control."
+      }
+    ]
+  },
+  "designs": {
+    "title": "Some Designs",
+    "seeMore": "see more",
+    "noImages": "No images in heros-jan."
+  },
+  "social": {
+    "title": "Contact",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "href": "https://linkedin.com/in/donato-gianluca"
+      },
+      { "label": "Twitter", "href": "https://twitter.com/giannidona_dev" },
+      { "label": "Gmail", "href": "mailto:giannidonato2005@gmail.com" }
+    ]
+  },
+  "footer": {
+    "thanks": "Thank you for taking the time to read this. 🖤"
+  },
+  "nav": {
+    "home": "home",
+    "gallery": "gallery"
+  }
+}

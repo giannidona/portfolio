@@ -23,6 +23,12 @@
         "name": "Stock Manager 📦",
         "description": "Panel de gestión de inventario y analíticas para un ecommerce que opera en MercadoLibre. Centraliza listings, links de distribuidores, stock propio y registro por escaneo.",
         "story": "Trabajo en un negocio de ecommerce que opera a través de MercadoLibre, involucrado activamente en las operaciones diarias y en la optimización de procesos internos mediante soluciones digitales. Colaboro en áreas clave como control de inventario, análisis de productos y organización operativa.\n\nDesarrollé una aplicación web interna para gestión de productos y stock que centraliza información crítica del negocio. La herramienta permite gestionar listings de MercadoLibre, acceder a links de distribuidores, manejar stock desde una base de datos propia y registrar productos por escaneo — reduciendo significativamente las tareas manuales y mejorando el control de inventario."
+      },
+      {
+        "slug": "puffa-ecommerce",
+        "name": "Puffa Ecommerce 🛒",
+        "description": "Ecommerce con catálogo no convencional, checkout con Mercado Pago y admin de pedidos y productos. Next.js, Supabase, Tailwind, TypeScript.",
+        "story": "Puffa es un ecommerce que no se presenta como los habituales pero cumple las mismas funciones: el catálogo se muestra de otra manera y es totalmente funcional. La idea nació para tener una tienda con todo integrado y operativa.\n\nIncluye integración con Mercado Pago para pagos y un panel de administración con gestor de pedidos y gestor de productos. Desarrollado con Next.js, Supabase, Tailwind CSS y TypeScript."
       }
     ]
   },

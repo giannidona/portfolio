@@ -14,6 +14,7 @@ export const Projects = () => {
 
   const techMap: Record<string, string[]> = {
     "stock-manager": ["Next", "Supabase", "Tailwind"],
+    "puffa-ecommerce": ["Next", "Supabase", "Tailwind", "TypeScript", "Mercado Pago"],
   };
 
   return (

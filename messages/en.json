@@ -23,6 +23,12 @@
         "name": "Stock Manager 📦",
         "description": "Inventory management and analytics panel for an ecommerce business operating on MercadoLibre. Centralizes listings, distributor links, stock control, and barcode scanning.",
         "story": "I work in an e-commerce business that operates through MercadoLibre, actively involved in day-to-day operations and optimizing internal processes through digital solutions. I collaborate in key areas such as inventory control, product analysis, and operational organization.\n\nI developed an internal web application for product and stock management that centralizes critical business information. The tool allows managing MercadoLibre listings, accessing distributor links, handling stock from a proprietary database, and registering products via scanning — significantly reducing manual tasks and improving inventory control."
+      },
+      {
+        "slug": "puffa-ecommerce",
+        "name": "Puffa Ecommerce 🛒",
+        "description": "Ecommerce with an unconventional catalog, Mercado Pago checkout, and admin for orders and products. Next.js, Supabase, Tailwind, TypeScript.",
+        "story": "Puffa is an ecommerce that doesn’t look like the usual store but does the same job: the catalog is presented in a different way while offering full functionality. The idea was to build a fully integrated, functional online store from the ground up.\n\nIt includes Mercado Pago integration for payments and an admin panel with an order manager and a product manager. Built with Next.js, Supabase, Tailwind CSS, and TypeScript."
       }
     ]
   },

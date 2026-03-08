@@ -12,6 +12,11 @@ export const projectMetaList: ProjectMeta[] = [
     tech: ["Next", "Supabase", "Tailwind"],
     video: "stock-manager.mp4",
   },
+  {
+    slug: "puffa-ecommerce",
+    tech: ["Next", "Supabase", "Tailwind", "TypeScript", "Mercado Pago"],
+    video: "puffa-ecom.mp4",
+  },
 ];
 
 export function getProjectMeta(slug: string): ProjectMeta | undefined {

@@ -29,6 +29,12 @@
         "name": "Puffa Ecommerce 🛒",
         "description": "Ecommerce with an unconventional catalog, Mercado Pago checkout, and admin for orders and products. Next.js, Supabase, Tailwind, TypeScript.",
         "story": "Puffa is an ecommerce that doesn’t look like the usual store but does the same job: the catalog is presented in a different way while offering full functionality. The idea was to build a fully integrated, functional online store from the ground up.\n\nIt includes Mercado Pago integration for payments and an admin panel with an order manager and a product manager. Built with Next.js, Supabase, Tailwind CSS, and TypeScript."
+      },
+      {
+        "slug": "catalogy",
+        "name": "Catalogy 🧾",
+        "description": "Simple web catalog for small brands or people who want to sell without unnecessary complexity. Built with Next.js and Supabase.",
+        "story": "I built Catalogy because my mom told me she wanted something simple to show all the cakes and homemade products she cooks and sells, without going through complicated steps.\n\nFrom that need, I decided to build this app to make catalog creation easier and help her share products in a simple and fast way."
       }
     ]
   },

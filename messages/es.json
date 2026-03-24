@@ -29,6 +29,12 @@
         "name": "Puffa Ecommerce 🛒",
         "description": "Ecommerce con catálogo no convencional, checkout con Mercado Pago y admin de pedidos y productos. Next.js, Supabase, Tailwind, TypeScript.",
         "story": "Puffa es un ecommerce que no se presenta como los habituales pero cumple las mismas funciones: el catálogo se muestra de otra manera y es totalmente funcional. La idea nació para tener una tienda con todo integrado y operativa.\n\nIncluye integración con Mercado Pago para pagos y un panel de administración con gestor de pedidos y gestor de productos. Desarrollado con Next.js, Supabase, Tailwind CSS y TypeScript."
+      },
+      {
+        "slug": "catalogy",
+        "name": "Catalogy 🧾",
+        "description": "Catalogo web simple para marcas chicas o personas que quieren vender algo sin tantas vueltas.",
+        "story": "Desarrollé Catalogy porque mi mama me habia dicho que queria algo para mostrar todas las tortas y cosas que ella cocina y vende, sin tener que pasar por procesos complicados.\n\nA partir de eso decidi crear esta app para facilitarle la creacion del catalogo y que pueda compartir sus productos de forma simple y rapida."
       }
     ]
   },

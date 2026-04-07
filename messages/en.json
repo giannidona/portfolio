@@ -35,6 +35,12 @@
         "name": "Catalogy 🧾",
         "description": "Simple web catalog for small brands or people who want to sell without unnecessary complexity. Built with Next.js and Supabase.",
         "story": "I built Catalogy because my mom told me she wanted something simple to show all the cakes and homemade products she cooks and sells, without going through complicated steps.\n\nFrom that need, I decided to build this app to make catalog creation easier and help her share products in a simple and fast way."
+      },
+      {
+        "slug": "minventario",
+        "name": "Mi inventario 👕",
+        "description": "App to showcase clothing, accessories, perfumes, and more, while discovering new items by browsing other users inventories.",
+        "story": "I built Mi inventario so people and small brands can display what they sell on a page without unnecessary complexity, especially products like clothing, accessories, perfumes, and related items.\n\nEach person has their own inventory, and users can browse other inventories to discover new products. Built with Next.js and Supabase."
       }
     ]
   },

@@ -16,6 +16,7 @@ export const Projects = () => {
     "stock-manager": ["Next", "Supabase", "Tailwind"],
     "puffa-ecommerce": ["Next", "Supabase", "Tailwind", "TypeScript", "Mercado Pago"],
     "catalogy": ["Next", "Supabase"],
+    "minventario": ["Next", "Supabase"],
   };
 
   return (

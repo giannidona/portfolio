@@ -37,10 +37,16 @@
         "story": "Desarrollé Catalogy porque mi mamá me había dicho que quería algo para mostrar todas las tortas y cosas que ella cocina y vende, sin tener que pasar por procesos complicados.\n\nA partir de eso decidí crear esta app para facilitarle la creación del catálogo y que pueda compartir sus productos de forma simple y rápida."
       },
       {
-        "slug": "minventario",
-        "name": "Mi inventario 👕",
-        "description": "App para mostrar ropa, accesorios, perfumes y más, y descubrir nuevos items navegando inventarios de otras personas.",
-        "story": "Desarrollé Mi inventario para que cualquier persona o marca chica pueda mostrar lo que vende en una página sin tantas vueltas, especialmente productos como ropa, accesorios, perfumes y otros ítems relacionados.\n\nCada usuario tiene su propio inventario y también se puede navegar entre otros inventarios para descubrir nuevos productos. Está desarrollada con Next.js y Supabase."
+        "slug": "mi-inventario",
+        "name": "Mi Inventario 👕",
+        "description": "App para mostrar ropa, accesorios, perfumes y más, y descubrir nuevos ítems navegando inventarios de otras personas.",
+        "story": "Desarrollé Mi Inventario para que cualquier persona o marca chica pueda mostrar lo que vende en una página sin tantas vueltas, especialmente productos como ropa, accesorios, perfumes y otros ítems relacionados.\n\nCada usuario tiene su propio inventario y también se puede navegar entre otros inventarios para descubrir nuevos productos. Está desarrollada con Next.js y Supabase."
+      },
+      {
+        "slug": "giannluca-boiler",
+        "name": "Giannluca's Boiler 🎧",
+        "description": "Mi boiler/radio 24/7 para escuchar mis sets en loop o elegir uno específico.",
+        "story": "Como uno de mis hobbies es ser DJ, desarrollé mi propio boiler/radio 24/7 para compartir mis sets en una experiencia simple y directa.\n\nLa gente puede dejar un set en loop o seleccionar el que quiera escuchar en cualquier momento. Está desarrollado con Next.js."
       }
     ]
   },

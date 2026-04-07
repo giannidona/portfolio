@@ -27,6 +27,11 @@ export const projectMetaList: ProjectMeta[] = [
     tech: ["Next", "Supabase"],
     liveUrl: "https://minventario.vercel.app/giannidona",
   },
+  {
+    slug: "giannluca-boiler",
+    tech: ["Next"],
+    liveUrl: "https://giannluca-boiler.vercel.app/",
+  },
 ];
 
 export function getProjectMeta(slug: string): ProjectMeta | undefined {

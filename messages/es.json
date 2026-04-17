@@ -50,6 +50,21 @@
       }
     ]
   },
+  "mcps": {
+    "title": "MCPs",
+    "back": "← volver",
+    "howDeveloped": "Cómo se desarrolló",
+    "seeRepo": "Ver repositorio →",
+    "items": [
+      {
+        "slug": "dolar-argentina-mcp",
+        "name": "dolar-argentina-mcp 🇦🇷",
+        "description": "Servidor MCP con 3 tools: get_dolar_prices (oficial, blue, MEP, CCL, mayorista, cripto y tarjeta con compra, venta y fecha de actualización), get_dolar_blue (blue compra/venta) y get_dolar_oficial (oficial compra/venta). Los datos vienen de dolarapi.com en tiempo real.",
+        "story": "Este MCP nació mientras veía tareas de ecommerce donde todo el tiempo hay que pasar precios de pesos a USD y viceversa. Como ya venía usando Claude para armar tablas y comparativas, quería evitar pedir la cotización manualmente en cada prompt.\n\nEntonces armé un servidor MCP para que Claude tenga acceso directo a los tipos de cambio de Argentina y me devuelva los valores actualizados cuando pido presupuestos, tablas o conversiones. Lo desarrollé en un rato libre de la facu con foco en que sea simple de instalar, rápido de usar y útil en el día a día.",
+        "tech": ["MCP", "Node.js", "JavaScript", "dolarapi.com"]
+      }
+    ]
+  },
   "designs": {
     "title": "Algunos Diseños",
     "seeMore": "ver más",

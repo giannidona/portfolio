@@ -50,6 +50,21 @@
       }
     ]
   },
+  "mcps": {
+    "title": "MCPs",
+    "back": "← back",
+    "howDeveloped": "How it was developed",
+    "seeRepo": "See repository →",
+    "items": [
+      {
+        "slug": "dolar-argentina-mcp",
+        "name": "dolar-argentina-mcp 🇦🇷",
+        "description": "MCP server with 3 tools: get_dolar_prices (official, blue, MEP, CCL, wholesale, crypto, and card rates with buy, sell, and update timestamp), get_dolar_blue (blue buy/sell), and get_dolar_oficial (official buy/sell). Data comes from dolarapi.com in real time.",
+        "story": "This MCP started while working on ecommerce tasks where I constantly needed to convert prices from ARS to USD and back. Since I was already using Claude to build tables and comparisons, I wanted to avoid manually asking for exchange rates in every prompt.\n\nSo I built an MCP server to give Claude direct access to Argentine dollar rates and return updated values when I ask for budgets, comparison tables, or currency conversions. I built it during free time from college, focused on making it easy to install, fast to use, and practical for day-to-day work.",
+        "tech": ["MCP", "Node.js", "JavaScript", "dolarapi.com"]
+      }
+    ]
+  },
   "designs": {
     "title": "Some Designs",
     "seeMore": "see more",

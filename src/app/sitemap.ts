@@ -21,6 +21,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
+  const mcpSlugs = ["dolar-argentina-mcp"];
+  const mcpRoutes = locales.flatMap((locale) =>
+    mcpSlugs.map((slug) => ({
+      url: `${baseUrl}/${locale}/mcps/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }))
+  );
+
   const galleryRoutes = locales.map((locale) => ({
     url: `${baseUrl}/${locale}/gallery`,
     lastModified: new Date(),
@@ -28,5 +38,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...homeRoutes, ...galleryRoutes, ...projectRoutes];
+  return [...homeRoutes, ...galleryRoutes, ...projectRoutes, ...mcpRoutes];
 }

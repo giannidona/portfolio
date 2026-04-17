@@ -2,6 +2,7 @@ import {
   AboutMe,
   HeroSlider,
   MainSection,
+  MCPs,
   Projects,
   SocialLinks,
   TechStack,
@@ -16,6 +17,7 @@ export default async function Home() {
       <AboutMe />
       <TechStack />
       <Projects />
+      <MCPs />
       <HeroSlider />
       <SocialLinks />
       <p className="mb-2 text-2xl font-bold">{t("thanks")}</p>

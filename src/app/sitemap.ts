@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { getAllProjectSlugs } from "@/data/projectMeta";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://gianluca-donato.vercel.app";
@@ -11,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: locale === "en" ? 1 : 0.9,
   }));
 
-  const projectSlugs = ["stock-manager"];
+  const projectSlugs = getAllProjectSlugs();
   const projectRoutes = locales.flatMap((locale) =>
     projectSlugs.map((slug) => ({
       url: `${baseUrl}/${locale}/projects/${slug}`,

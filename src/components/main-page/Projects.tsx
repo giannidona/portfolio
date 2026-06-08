@@ -21,9 +21,17 @@ export const Projects = () => {
       "TypeScript",
       "Mercado Pago",
     ],
+    sadona: [
+      "Next",
+      "Supabase",
+      "Tailwind",
+      "TypeScript",
+      "Mercado Pago",
+      "Google Shopping",
+    ],
     catalogy: ["Next", "Supabase"],
     "mi-inventario": ["Next", "Supabase"],
-    "boiler-radio": ["Next"],
+    "giannluca-boiler": ["Next"],
   };
 
   return (

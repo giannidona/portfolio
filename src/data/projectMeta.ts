@@ -18,6 +18,18 @@ export const projectMetaList: ProjectMeta[] = [
     video: "puffa-ecom.mp4",
   },
   {
+    slug: "sadona",
+    tech: [
+      "Next",
+      "Supabase",
+      "Tailwind",
+      "TypeScript",
+      "Mercado Pago",
+      "Google Shopping",
+    ],
+    video: "sadona.mp4",
+  },
+  {
     slug: "catalogy",
     tech: ["Next", "Supabase"],
     video: "catalogy.mp4",
